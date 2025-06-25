@@ -3,7 +3,7 @@ import { useUserHook } from "../hooks/useUserHook";
 import { toast } from "react-hot-toast";
 
 const instance = axios.create({
-  baseURL: `https://icode-backend-nine.vercel.app//api/admin`,
+  baseURL: `https://icode-backend-nine.vercel.app/api/admin`,
   withCredentials: true,
 });
 
