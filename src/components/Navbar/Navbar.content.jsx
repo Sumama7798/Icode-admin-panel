@@ -84,7 +84,7 @@ const NavbarContent = ({ toggleDropdown, isDropdownOpen, closeDropdown, toggleNa
         </div>
 
         {/* SuperAdmin Only Links */}
-        {json.parse(localStorage.getItem('user'))?.role === "superAdmin" && (
+        {JSON.parse(localStorage.getItem('user'))?.role === "superAdmin" && (
           <Link to="/manage-users" className="messages-btn flex items-center">
             <Users  className="mr-2 w-8 h-8 font-bold" />
             {!isCollapsed && <span>Manage Users</span>}
