@@ -6,6 +6,7 @@ import {
 import { Link, useNavigate } from 'react-router-dom';
 import { useUserHook } from '../../hooks/useUserHook';
 import toast from 'react-hot-toast';
+import js from '@eslint/js';
 
 const NavbarContent = ({ toggleDropdown, isDropdownOpen, closeDropdown, toggleNavbar, isCollapsed }) => {
   
@@ -83,7 +84,7 @@ const NavbarContent = ({ toggleDropdown, isDropdownOpen, closeDropdown, toggleNa
         </div>
 
         {/* SuperAdmin Only Links */}
-        { localStorage.getItem('role') === "superAdmin" && (
+        {json.parse(localStorage.getItem('user'))?.role === "superAdmin" && (
           <Link to="/manage-users" className="messages-btn flex items-center">
             <Users  className="mr-2 w-8 h-8 font-bold" />
             {!isCollapsed && <span>Manage Users</span>}
